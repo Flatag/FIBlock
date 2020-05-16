@@ -1,5 +1,6 @@
 # FIBlock
 Fault Injection Block for Simulink models
+Please refer to a comprehensive article regarding the FIBLock: https://flatag.tech/fiblock.html
 
 This block allows to conduct a fault injection experiment (refer to help if needed).
 Specify:
