@@ -40,5 +40,7 @@ Second output of the FIBlock emits a trigger flag.
 This output signal could be connected to the second input of the FIBlock. 
 In case of the fault injection, this signal will force trigger fault injectionin second FIBlock.
 
+[![View Fault Injection Block (FIBlock) on File Exchange](https://www.mathworks.com/matlabcentral/images/matlab-file-exchange.svg)](https://www.mathworks.com/matlabcentral/fileexchange/75539-fault-injection-block-fiblock)
+
 Made By Tagir Fabarisov, TU Dresden 2020
 GNU General Public License v3.0
