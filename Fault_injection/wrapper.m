@@ -3,6 +3,8 @@ d = data;
 t = time;
 n = name;
 f = flag;
+%global f_flag;
+%f = f_flag;
 error_data = d;
 error_flag = 0;
 global finjectors;

@@ -119,6 +119,22 @@ classdef FaultInjector < handle
                         error_data = ...
                             es_inject_error_gen_dfi_mttr(obj, time_data, simul_time);
                 end
+              case 'Manual'
+                %disp('manual')
+                switch obj.effect_type
+                    case 'Once'
+                        error_data = ...
+                            es_inject_error_gen_manual(obj, time_data, simul_time);
+                    case 'Constant time'
+                        error_data = ...
+                            es_inject_error_gen_manual(obj, time_data, simul_time);
+                    case 'Infinite time'
+                        error_data = ...
+                            es_inject_error_gen_manual(obj, time_data, simul_time);
+                    case 'Mean Time To Repair'
+                        error_data = ...
+                            es_inject_error_gen_manual(obj, time_data, simul_time);
+                end
             case 'Failure rate distribution'
                 %disp('FRD')
                 switch obj.effect_type

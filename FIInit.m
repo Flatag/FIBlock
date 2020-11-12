@@ -22,8 +22,22 @@ FIBeffect = p.getParameter('FaultEffect');
 FIBeffectval = p.getParameter('EffectValue');
 global finjectors;
 finjectors = containers.Map;
-finjectors(FIBname.Value) = FaultInjector(FaultType, str2double(FIBvalue.Value), FIBevent.Value, str2double(FIBeventval.Value), FIBeffect.Value, str2double(FIBeffectval.Value));
-
+if isempty(str2num(FIBvalue.Value))
+    BaseFIBvalue = evalin('base', FIBvalue.Value);
+else
+    BaseFIBvalue = str2double(FIBvalue.Value);
+end
+if isempty(str2num(FIBeventval.Value))
+    BaseFIBeventval = evalin('base', FIBeventval.Value);
+else
+    BaseFIBeventval = str2double(FIBeventval.Value);
+end
+if isempty(str2num(FIBeffectval.Value))
+    BaseFIBeffectval = evalin('base', FIBeffectval.Value);
+else
+    BaseFIBeffectval = str2double(FIBeffectval.Value);
+end
+finjectors(FIBname.Value) = FaultInjector(FaultType, BaseFIBvalue, FIBevent.Value, BaseFIBeventval, FIBeffect.Value, BaseFIBeffectval);
 try
   baseFI = evalin('base','finjectors');
 catch

@@ -28,7 +28,7 @@ function error_data = es_inject_error_bitflip( input_data, number_of_bitflips )
         res_data = typecast(data_cast, var_type);
     end
 
-    error_data = res_data;
+    error_data = double(res_data);
 
     
 end
