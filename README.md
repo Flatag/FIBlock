@@ -47,5 +47,11 @@ FIBlock supports for a base Workspace variables as input in the GUI parameters.
 
 ## How to operate the FIBlock?
 
+The FIBlock library is present in the FIBlock.slx file. This library has to be unlocked (by clicking the Locked Library button) in order to perform changes to the block. The inputs and outputs of the FIBlock are described below :
+
+Attempt | #1 | #2 | #3 | #4 | #5 | #6 | #7 | #8 | #9 | #10 | #11
+--- | --- | --- | --- |--- |--- |--- |--- |--- |--- |--- |---
+Seconds | 301 | 283 | 290 | 286 | 289 | 285 | 287 | 287 | 272 | 276 | 269
+
 Made By Tagir Fabarisov, TU Dresden 2020
 GNU General Public License v3.0
