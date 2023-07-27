@@ -45,13 +45,21 @@ FIBlock supports for a base Workspace variables as input in the GUI parameters.
 
 [![View Fault Injection Block (FIBlock) on File Exchange](https://www.mathworks.com/matlabcentral/images/matlab-file-exchange.svg)](https://www.mathworks.com/matlabcentral/fileexchange/75539-fault-injection-block-fiblock)
 
-## How to operate the FIBlock?
+## FIBlock Properties
 
 The FIBlock library is present in the FIBlock.slx file. This library has to be unlocked (by clicking the Locked Library button) in order to perform changes to the block. The inputs and outputs of the FIBlock are described below :
 
-Attempt | #1 | #2 | #3 | #4 | #5 | #6 | #7 | #8 | #9 | #10 | #11
---- | --- | --- | --- |--- |--- |--- |--- |--- |--- |--- |---
-Seconds | 301 | 283 | 290 | 286 | 289 | 285 | 287 | 287 | 272 | 276 | 269
+|     **Port**     |                                     **Description**                                     |
+|:----------------:|:---------------------------------------------------------------------------------------:|
+| Idata            | Input signal to which fault has to be injected                                          |
+| Iflag            | For consecutive error blocks. Fflag output from previous FIBlock is to be used as input |
+| Fdata            | Invalid data signal after fault is injected as per user requirement                     |
+| Fflag            | The error flag signal                                                                   |
+| Ftype            | Shows the FaultType. Displayed as an enum                                               |
+| FInjectionPoints | Shows at what time points the error has been injected                                   |
+
+
+
 
 Made By Tagir Fabarisov, TU Dresden 2020
 GNU General Public License v3.0
