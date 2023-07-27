@@ -58,7 +58,7 @@ The FIBlock library is present in the FIBlock.slx file. This library has to be u
 | Ftype            | Shows the FaultType. Displayed as an enum                                               |
 | FInjectionPoints | Shows at what time points the error has been injected                                   |
 
-
+![image](https://github.com/stephenphilipose/FIBlock/assets/53791862/5ea57e7a-ebe3-4d79-ad7b-1130d0c70a4a)
 
 
 Made By Tagir Fabarisov, TU Dresden 2020
