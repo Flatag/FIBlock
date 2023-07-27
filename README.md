@@ -27,7 +27,7 @@ Specify:
 
 3) fault event: 
 - Failure probability. Errors are injected based on the constant Failure probability for each execution of the block function.
-- Mean Time to Failure. Errors are injected according to the specified MTTF. Normal distribution.
+- Mean Time to Failure. Errors are injected according to the specified MTTF Normal distribution.
 - Deterministic. Errors are injected at specific time step.
 
 4) fault effect: 
@@ -47,7 +47,11 @@ FIBlock supports for a base Workspace variables as input in the GUI parameters.
 
 ## FIBlock Properties
 
-The FIBlock library is present in the FIBlock.slx file. This library has to be unlocked (by clicking the Locked Library button) in order to perform changes to the block. The inputs and outputs of the FIBlock are described below :
+The FIBlock library is present in the "FIBlock.slx" file. This library has to be unlocked (by clicking the Locked Library button) in order to perform changes to the block. 
+
+![image](https://github.com/stephenphilipose/FIBlock/assets/53791862/329e5351-c46c-4f97-a6fd-2c63cf4d8d89)
+
+The inputs and outputs of the FIBlock are described below :
 
 |     **Port**     |                                     **Description**                                     |
 |:----------------:|:---------------------------------------------------------------------------------------:|
@@ -58,7 +62,52 @@ The FIBlock library is present in the FIBlock.slx file. This library has to be u
 | Ftype            | Shows the FaultType. Displayed as an enum                                               |
 | FInjectionPoints | Shows at what time points the error has been injected                                   |
 
-![image](https://github.com/stephenphilipose/FIBlock/assets/53791862/5ea57e7a-ebe3-4d79-ad7b-1130d0c70a4a)
+- To see the implementation of the complete block : Right click the FIBlock -> Mask -> Look Under Mask. 
+
+![image](https://github.com/stephenphilipose/FIBlock/assets/53791862/d41c258a-b3d9-4f0b-abba-11dd4dd1072f)
+
+- To see the implementation of the complete block : Right click the FIBlock -> Mask -> Edit Mask.
+  Here, the various parameters, GUI, initial code for starting the FIBlock, icon behind the FIBlock can be modified. The initial code contains the user input values retrieved as an object.
+
+## GUI and testing the FIBlock
+
+To test the FIBlock, open the "testFIB.slx" file. 
+
+![image](https://github.com/stephenphilipose/FIBlock/assets/53791862/732bfec1-7b21-4640-b1c0-b22172b458a4)
+
+It contains two FIBlocks in cascade. On double clicking the first FIBlock, the GUI will open. The GUI makes it possible for the user to set the block paramters. The fault type, the fault value, the fault injection method, event value and the fault injection effect and the effect value can be modified using this GUI.
+
+![image](https://github.com/stephenphilipose/FIBlock/assets/53791862/b7e1c5c6-b214-4f7b-be8a-38bbcd230101)
+
+- The parameters prompted and the accepted values for each Fault Type are given below:
+
+| **Fault Type** |  **Mask Parameter Prompted**  |     **Accepted values**     |
+|:--------------:|:-----------------------------:|:---------------------------:|
+| Noise          | Fault value (boundaries, %)   | Any number between 1 to 100 |
+| Bias/Offset    | Fault value (bias)            | Any integer number          |
+| Bit flips      | Fault value (number of bits)  | Any natural number          |
+| Stuck-at       | No Mask Parameter is prompted | Not Applicable (NA)         |
+| Time delay     | No Mask Parameter is prompted | NA                          |
+| Drift          | Fault value (slope)           | Any number                  |
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 Made By Tagir Fabarisov, TU Dresden 2020
